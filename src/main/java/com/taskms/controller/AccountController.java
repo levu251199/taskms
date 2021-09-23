@@ -61,7 +61,9 @@ public class AccountController {
 			@RequestParam(value = "remember", defaultValue = "false") boolean remember) {
 		Account account = accountDAO.findbyUsername(username);
 		if (account == null) {
-			model.addAttribute("message", "Sai thông tin email đăng nhập");
+			model.addAttribute("message", "Sai thông tin");
+		} else if (!username.equals(account.getUsername())) {
+			model.addAttribute("message", "Sai tên người dùng");
 		} else if (!password.equals(account.getPassword())) {
 			model.addAttribute("message", "Sai mật khẩu");
 		} else if (!account.getActivated()) {
@@ -78,11 +80,12 @@ public class AccountController {
 				cookie.deleteCookie("accountPwd");
 			}
 			String backURI = (String) session.getAttribute("back-uri");
-			if(backURI != null) {
+			if (backURI != null) {
 				return "redirect:" + backURI;
 			}
 		}
 		return "redirect:/task/mytask";
+
 	}
 
 	/* LOGOUT */
@@ -115,7 +118,7 @@ public class AccountController {
 		String body = "<a href='" + url + "'> Please verify your account here </a>";
 		MailInfo mail = new MailInfo(from, to, subject, body);
 		mailer.send(mail);
-		return "/user/register";
+		return "redirect:/user/verified";
 	}
 
 	/* CONFIRM ACCOUNT VERIFIED */

@@ -19,12 +19,13 @@
 		<java.version>16</java.version>
 	</properties>
 	<dependencies>
+
 		<!-- Spring Email Tool -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
-	
+		</dependency> 
+
 		<!-- Tomcat Embed Jasper -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>

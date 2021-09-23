@@ -7,7 +7,7 @@ import com.taskms.entity.Account;
 public interface AccountDAO {
 	// Find By ID
 	Account findbyID(Integer id);
-	
+
 	// Find By Email
 	Account findbyUsername(String email);
 

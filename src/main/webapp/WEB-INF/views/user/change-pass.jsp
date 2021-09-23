@@ -25,19 +25,19 @@ body {
 			<h4>${message}</h4>
 			<div class="mt-4 form-group">
 				<input name="username" type="text" class="form-control" id="username"
-					placeholder="Tên người dùng">
+					placeholder="Tên người dùng" required>
 			</div>
 			<div class="mt-3 form-group">
 				<input name="old-password" type="password" class="form-control" id="old-password"
-					placeholder="Mật khẩu hiện tại">
+					placeholder="Mật khẩu hiện tại" required>
 			</div>
 			<div class="mt-3 form-group">
 				<input name="new-password" type="password" class="form-control" id="new-password"
-					placeholder="Mật khẩu mới">
+					placeholder="Mật khẩu mới" required>
 			</div>
 			<div class="mt-3 form-group">
 				<input name="retype-password" type="password" class="form-control" id="retype-password"
-					placeholder="Nhập lại mật khẩu mới">
+					placeholder="Nhập lại mật khẩu mới" required>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="my-3 btn btn-dark form-control">Đổi mật khẩu</button>

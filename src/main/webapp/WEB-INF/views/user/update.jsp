@@ -1,5 +1,6 @@
 <%@ page language="java" pageEncoding="utf-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,31 +27,39 @@ body {
 			<div class="mt-3 row">
 				<div class="col form-group">
 					<form:input path="username" type="text" class="form-control"
-						id="username" placeholder="Tên người dùng" />
+						id="username" placeholder="Tên người dùng" required="required"/>
 				</div>
 				<div class="col form-group">
 					<form:input path="email" type="email" class="form-control"
-						id="email" placeholder="Email" />
+						id="email" placeholder="Email" required="required"/>
 				</div>
 			</div>
 			<div class="mt-3 row">
 				<div class="col form-group">
 					<form:input path="lastName" type="text" class="form-control"
-						id="last-name" placeholder="Họ" />
+						id="last-name" placeholder="Họ" required="required"/>
 				</div>
 				<div class="col form-group">
 					<form:input path="firstName" type="text" class="form-control"
-						id="first-name" placeholder="Tên" />
+						id="first-name" placeholder="Tên" required="required"/>
 				</div>
 			</div>
 			<div class="mt-3 row">
 				<div class="col form-group">
 					<form:input path="birth" type="date" class="form-control"
-						id="birth" />
+						id="birth" required="required"/>
 				</div>
 				<div class="col form-group">
-					<i class="fas fa-user-check"></i><span> Tài khoản đã xác
+				<c:choose>
+				<c:when test="${empty account.activated}">
+					<i class="fas fa-user-check"></i><span> Tài khoản chưa xác
 						thực</span>
+				</c:when>
+				<c:otherwise>
+					<i class="fas fa-user-check"></i><span> Tài khoản đã xác
+						thực</span>					
+				</c:otherwise>
+			</c:choose>
 				</div>
 			</div>
 			

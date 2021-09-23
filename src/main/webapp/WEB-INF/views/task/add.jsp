@@ -39,11 +39,11 @@
 			<form:form action="/task/create" modelAttribute="entity">
 				<div class="form-group">
 					<label for="name">Tên công việc</label>
-					<form:input path="name" type="text" class="form-control" id="name" placeholder="Quét nhà cho mẹ..."/>
+					<form:input path="name" type="text" class="form-control" id="name" placeholder="Quét nhà cho mẹ..." required="required"/>
 				</div>
 				<div class="mt-3 form-group">
 					<label for="priority">Mức ưu tiên</label>
-					<form:input path="priority" type="text" class="form-control" id="priority" placeholder="Cực cao ( ಠ ͜ʖಠ)"/>
+					<form:input path="priority" type="text" class="form-control" id="priority" placeholder="Cực cao ( ಠ ͜ʖಠ)" required="required"/>
 				</div>
 				<div class="mt-3 form-group">
 					<label for="due-date">Ngày hết hạn</label>
@@ -51,7 +51,7 @@
 				</div>
 				<div class="mt-3 form-group">
 					<label for="description">Mô tả chi tiết</label>
-					<form:textarea path="description" class="form-control" id="description" rows="3" placeholder="Không quét là ăn đòn"></form:textarea>
+					<form:textarea path="description" class="form-control" id="description" rows="3" placeholder="Không quét là ăn đòn" required="required"></form:textarea>
 				</div>
 				<div class="form-group">
 					<form:hidden path="account.username" value="${account.username}"/>

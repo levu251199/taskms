@@ -26,30 +26,30 @@ body {
 			<div class="mt-3 row">
 				<div class="col form-group">
 					<form:input path="username" type="text" class="form-control" id="username"
-						placeholder="Tên người dùng"/>
+						placeholder="Tên người dùng" required="required"/>
 				</div>
 				<div class="col form-group">
 					<form:input path="password" type="password" class="form-control" id="password"
-						placeholder="Mật khẩu"/>
+						placeholder="Mật khẩu" required="required"/>
 				</div>
 			</div>
 			<div class="mt-3 row">
 				<div class="col form-group">
 					<form:input path="lastName" type="text" class="form-control" id="last-name"
-						placeholder="Họ"/>
+						placeholder="Họ" required="required"/>
 				</div>
 				<div class="col form-group">
 					<form:input path="firstName" type="text" class="form-control" id="first-name"
-						placeholder="Tên"/>
+						placeholder="Tên" required="required"/>
 				</div>
 			</div>
 			<div class="mt-3 row">
 				<div class="col form-group">
 					<form:input path="email" type="email" class="form-control" id="email"
-						placeholder="Email"/>
+						placeholder="Email" required="required"/>
 				</div>
 				<div class="col form-group">
-					<form:input path="birth" type="date" class="form-control" id="birth"/>
+					<form:input path="birth" type="date" class="form-control" id="birth" required="required"/>
 				</div>
 			</div>
 

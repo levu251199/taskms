@@ -25,11 +25,11 @@ body {
 			<h4>${message}</h4>
 			<div class="mt-4 form-group">
 				<input name="username" type="text" class="form-control" id="username"
-					placeholder="Tên người dùng">
+					placeholder="Tên người dùng" required>
 			</div>
 			<div class="mt-3 form-group">
 				<input name="email" type="email" class="form-control" id="email"
-					placeholder="Email">
+					placeholder="Email" required>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="my-3 btn btn-dark form-control">Lấy mật khẩu</button>

@@ -22,14 +22,13 @@ body {
 			<h1 style="letter-spacing: 2px;">
 				<i class="fas fa-dice-d20"></i> TaskMS
 			</h1>
-			<h4>${message}</h4>
 			<div class="mt-4 form-group">
 				<input name="username" type="text" class="form-control" id="username"
-					placeholder="Tên người dùng" value="${username}">
+					placeholder="Tên người dùng" value="${username}" required>
 			</div>
 			<div class="mt-3 form-group">
 				<input name="password" type="password" class="form-control" id="password"
-					placeholder="Mật khẩu" value="${password}">
+					placeholder="Mật khẩu" value="${password}" required>
 			</div>
 			<div class="col form-group mt-2">
 				<input name="remember" class="form-check-input" type="checkbox" id="rememberMe">
@@ -56,7 +55,7 @@ body {
 			<div class="form-group">
 				<button type="submit" class="my-3 btn btn-dark form-control">Đăng
 					nhập</button>
-				<a style="text-decoration: none; color: black;" href="#"><span>Chưa
+				<a style="text-decoration: none; color: black;" href="/user/register"><span>Chưa
 						có tài khoản?</span></a>
 			</div>
 		</form>

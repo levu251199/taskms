@@ -41,12 +41,12 @@
 				<div class="form-group">
 					<label for="name">Tên công việc</label>
 					<form:input path="name" value="${task.name}" type="text"
-						class="form-control" id="name" />
+						class="form-control" id="name" required="required"/>
 				</div>
 				<div class="mt-3 form-group">
 					<label for="priority">Mức ưu tiên</label>
 					<form:input path="priority" value="${task.priority}" type="text"
-						class="form-control" id="priority" />
+						class="form-control" id="priority" required="required"/>
 				</div>
 				<div class="mt-3 form-group">
 					<label for="due-date">Ngày hết hạn</label>
@@ -56,7 +56,7 @@
 				<div class="mt-3 form-group">
 					<label for="description">Mô tả chi tiết công việc</label>
 					<form:textarea path="description" class="form-control"
-						id="description" rows="3"></form:textarea>
+						id="description" rows="3" required="required"></form:textarea>
 				</div>
 				<div class="form-group">
 					<form:hidden path="id"/>
