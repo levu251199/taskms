@@ -114,8 +114,8 @@ public class AccountController {
 		String url = request.getRequestURL().toString().replace("register", "activated/" + account.getUsername());
 		String from = "service025897@gmail.com";
 		String to = account.getEmail();
-		String subject = "Thank you for registed TaskMS";
-		String body = "<a href='" + url + "'> Please verify your account here </a>";
+		String subject = "TaskMS | Cám ơn bạn đã đăng ký thành viên";
+		String body = " Chào "+ account.getFirstName() + ",<br><br>Cám ơn bạn đã sử dụng TaskMS, vui lòng nhấn vào <a href='" + url + "'>đây</a>để kích hoạt tài khoản của bạn.<br><br>Trân trọng,<br>Le Vu<br><i>TaskMS Director</i>";
 		MailInfo mail = new MailInfo(from, to, subject, body);
 		mailer.send(mail);
 		return "redirect:/user/verified";
